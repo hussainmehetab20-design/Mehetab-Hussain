@@ -1593,5 +1593,11 @@
       <p id="toast-message" class="text-xs font-semibold leading-snug flex-1"></p>
     </div>
   </div>
-</body>
+</body><script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
+</script>
 </html>
